@@ -8,7 +8,7 @@ const Product = () => {
             <AlertBanner alertText={{message: 'this is an alert message for customer'}} />
             <NavBar />
             <h1>Product page</h1>
-               <Button />
+            
         </div>
     ); 
 }

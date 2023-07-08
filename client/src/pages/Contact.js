@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Footer from '../components/footer/Footer'; 
 
 const ContactForm = () => { 
     const [customerName, setCustomerName] = useState({firstName: '', lastName: ''}); 
@@ -58,6 +59,8 @@ const ContactForm = () => {
                 <p>The subject of your issue is {subject}</p>
             </div>
             }
+
+            <Footer />
         </>
     )
 }
