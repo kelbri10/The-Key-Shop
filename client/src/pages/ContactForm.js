@@ -10,6 +10,8 @@ const ContactForm = () => {
         <>
             {/* TODO: add form with the following input fields 
             - attach files option 
+            - add interactivity for submit button
+
             reference for input related documentation: 
             https://react.dev/reference/react-dom/components/input
             */}
@@ -18,13 +20,13 @@ const ContactForm = () => {
             name='firstName'
             placeholder='First Name'
             value={customerName.firstName}
-            onChange={e => setCustomerName({firstName: e.target.value, lastName: e.lastName})}
+            onChange={e => setCustomerName({firstName: e.target.value, ...customerName})}
             />
              <input type='text'
             name='lastName'
             placeholder='Last Name'
             value={customerName.lastName}
-            onChange={e => setCustomerName({firstName: e.firstName, lastName: e.target.value})}
+            onChange={e => setCustomerName({...customerName, lastName: e.target.value})}
             />
              <input type='text'
             name='email'

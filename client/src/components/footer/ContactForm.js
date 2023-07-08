@@ -1,8 +1,16 @@
+import { useState } from "react";
+
 const ContactForm = () => { 
+    const [email, setEmail] = useState(''); 
     return (
         <form>
-            <input />
-            <button>Contact</button>
+              <input type='text'
+            name='email'
+            placeholder='email'
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            />
+            <button type='submit'>Contact</button>
         </form>
     ); 
 }
