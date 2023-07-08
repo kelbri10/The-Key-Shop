@@ -18,13 +18,13 @@ const ContactForm = () => {
             name='firstName'
             placeholder='First Name'
             value={customerName.firstName}
-            onChange={e => setCustomerName({firstName: e.target.value, lastName: customerName.lastName})}
+            onChange={e => setCustomerName({firstName: e.target.value, lastName: e.lastName})}
             />
              <input type='text'
             name='lastName'
             placeholder='Last Name'
             value={customerName.lastName}
-            onChange={e => setCustomerName({firstName: customerName.firstName, lastName: e.target.value})}
+            onChange={e => setCustomerName({firstName: e.firstName, lastName: e.target.value})}
             />
              <input type='text'
             name='email'
