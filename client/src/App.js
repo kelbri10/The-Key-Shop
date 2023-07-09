@@ -1,11 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
-import ContactForm from './pages/ContactForm';
+
+import Landing from './pages/Landing'; 
 
 function App() {
   return (
     <div className="App">
-      <ContactForm/>
+      <Landing />
     </div>
   );
 }
