@@ -7,7 +7,13 @@ const Product = () => {
         <div>
             <AlertBanner alertText={{message: 'this is an alert message for customer'}} />
             <NavBar />
-            <h1>Product page</h1>
+            <h1>Product Collections </h1>
+            
+            {/* TODO: 
+            -drop down menu to sort the products
+            -sidebar to filter what products looking at 
+            -product link to product details page */}
+            
             
         </div>
     ); 

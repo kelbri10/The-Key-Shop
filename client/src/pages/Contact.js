@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../components/Button";
 import Footer from '../components/footer/Footer'; 
 
 const ContactForm = () => { 
@@ -21,9 +22,10 @@ const ContactForm = () => {
             name='firstName'
             placeholder='First Name'
             value={customerName.firstName}
-            onChange={e => setCustomerName({firstName: e.target.value, ...customerName})}
+            onChange={e => setCustomerName({firstName: e.target.value, lastName: customerName.lastName})}
             />
-             <input type='text'
+            
+            <input type='text'
             name='lastName'
             placeholder='Last Name'
             value={customerName.lastName}
@@ -48,7 +50,7 @@ const ContactForm = () => {
             onChange={e => setSubject(e.target.value)}
             />
 
-            {/* <button type='submit'>Submit</button> */}
+            <Button text={'submit'} type='submit' />
 
             { customerName !== '' &&
             <div>

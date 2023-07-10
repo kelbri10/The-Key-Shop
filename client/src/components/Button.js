@@ -1,7 +1,9 @@
-const Button = ({buttonText}) => {  
+const Button = ({text}) => {  
     return ( 
-        <button>{buttonText.message}</button>
+        <button>{text}</button>
     )
 }
+
+// need to add functionality for displaying icon if one is passed into the component
 
 export default Button; 
