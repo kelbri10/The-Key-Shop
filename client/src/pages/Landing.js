@@ -11,33 +11,6 @@ const Landing = () => {
 
             <Section />
 
-             {/* feature a new keyboard with description, shop button to see more about specific linked project*/}
-            
-            {/* <section>
-                <h1>subheading 1</h1>
-                <p>quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse</p>
-                <Button text={'shop now'} />
-            </section>
-
-            <section>
-                <h2>subheading 2</h2>
-                <p>quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse</p>
-                <Button text={'learn more'}/>
-            </section> */}
-             {/* mission statement of the fake company, learn more button links to about */}
-
-            {/* <section>
-                <h2>Product 1 </h2>
-                <p>quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse</p>
-                <Button text={'see details'}/> 
-            </section>
-
-            <section>
-                <h2>Product 2 </h2>
-                <p>quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse</p>
-                <Button text={'see details'}/> 
-            </section> */}
-
             <section className='featureCollections'>
                 <h2>Featured Collections</h2>
                 <img src='https://source.unsplash.com/random/500x400/?keyboard' />
