@@ -1,6 +1,7 @@
 import Button from '../components/Button'; 
 import AlertBanner from '../components/AlertBanner'; 
 import NavBar  from '../components/NavBar';
+import ProductGrid from '../components/product/ProductGrid';
 
 const Product = () => { 
     return( 
@@ -14,6 +15,7 @@ const Product = () => {
             -sidebar to filter what products looking at 
             -product link to product details page */}
             
+            <ProductGrid />
             
         </div>
     ); 

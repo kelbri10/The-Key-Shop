@@ -1,6 +1,6 @@
 import NavBar from "../components/NavBar"; 
 import BreadCrumb from "../components/Breadcrumb";
-
+import axios from "axios";
 const FilteredProduct = (product) => { 
    return(
     <div>
