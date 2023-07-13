@@ -8,16 +8,22 @@ const ProductGrid = () => {
     const fetchProducts = async() => { 
         let response = await axios('http://localhost:3080/products'); 
         let products = await response.data; 
-        setProducts(products); 
+        setProducts(products);
+        console.log(products) 
     }
 
     useEffect(() => { 
         fetchProducts(); 
     }, []); 
 
-    const gridItems = products.map(product => 
-        <h1>{product.name}</h1>
-    ); 
+    const gridItems = products.map(product => (
+        <div key={product._id}>
+            <img src='https://source.unsplash.com/random/400x400/?keyboard' alt="random unsplash image"/>
+            <p>{product.name}</p>
+            <p>{product.brand}</p>
+            <p>{product.price["$numberDecimal"]}</p>
+        </div>
+    )); 
 
     return(
         <>
