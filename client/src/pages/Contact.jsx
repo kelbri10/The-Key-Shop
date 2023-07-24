@@ -1,13 +1,23 @@
 import { useState } from "react";
 import Button from "../components/Button";
 import Footer from '../components/footer/Footer'; 
+import '../index.css'; 
 
 const ContactForm = () => { 
-    const [customerName, setCustomerName] = useState({firstName: '', lastName: ''}); 
-    const [email, setEmail] = useState(''); 
-    const [orderNumber, setOrderNumber] = useState(''); 
-    const [subject, setSubject] = useState(''); 
+    const [customerInformation, setCustomerInformation] = useState({
+        name: '', 
+        email: '', 
+        orderNumber: '', 
+        subject: ''
+    }); 
+    // const [customerName, setCustomerName] = useState({firstName: '', lastName: ''}); 
+    // const [email, setEmail] = useState(''); 
+    // const [orderNumber, setOrderNumber] = useState(''); 
+    // const [subject, setSubject] = useState(''); 
 
+    const handleSubmit = (e) => { 
+        console.log(customerInformation); 
+    }
     return (
         <>
             {/* TODO: add form with the following input fields 
@@ -18,50 +28,43 @@ const ContactForm = () => {
             https://react.dev/reference/react-dom/components/input
             */}
 
-            <input type='text'
-            name='firstName'
-            placeholder='First Name'
-            value={customerName.firstName}
-            onChange={e => setCustomerName({firstName: e.target.value, lastName: customerName.lastName})}
-            />
+            <form className="flex flex-col items-center gap-2"
+            onSubmit={handleSubmit} >
+
+                <input className="border-2 border-black"
+                type='text'
+                name='name'
+                placeholder='Please enter first and last name on the order.'
+                value={customerInformation.name}
+                onChange={e => setCustomerInformation({...customerInformation, name: e.target.value})}
+                />
+                
+                <input className="border-2 border-black" 
+                type='text'
+                name='email'
+                placeholder='E-mail Address'
+                value={customerInformation.email}
+                onChange={e => setCustomerInformation({...customerInformation, email: e.target.value})}
+                />
+                <input className="border-2 border-black"
+                type='text'
+                name='orderNumber'
+                placeholder='Order Number'
+                value={customerInformation.orderNumber}
+                onChange={e => setCustomerInformation({...customerInformation, orderNumber: e.target.value})}
+                />
+                <input className="border-2 border-black"
+                type='text'
+                name='subject'
+                placeholder='Subject'
+                value={customerInformation.subject}
+                onChange={e => setCustomerInformation({...customerInformation, subject: e.target.value})}
+                />
+
+                <Button text={'submit'} type='submit' />
+            </form>
+
             
-            <input type='text'
-            name='lastName'
-            placeholder='Last Name'
-            value={customerName.lastName}
-            onChange={e => setCustomerName({...customerName, lastName: e.target.value})}
-            />
-             <input type='text'
-            name='email'
-            placeholder='E-mail Address'
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            />
-             <input type='text'
-            name='orderNumber'
-            placeholder='Order Number'
-            value={orderNumber}
-            onChange={e => setOrderNumber(e.target.value)}
-            />
-             <input type='text'
-            name='subject'
-            placeholder='Subject'
-            value={subject}
-            onChange={e => setSubject(e.target.value)}
-            />
-
-            <Button text={'submit'} type='submit' />
-
-            { customerName !== '' &&
-            <div>
-                <p>Your first name is {customerName.firstName} </p>
-                <p>Your last name is {customerName.lastName}</p>
-                <p>Your email is {email}</p>
-                <p>Your order number is {orderNumber}</p>
-                <p>The subject of your issue is {subject}</p>
-            </div>
-            }
-
             <Footer />
         </>
     )
