@@ -3,7 +3,7 @@ import AlertBanner from '../components/AlertBanner';
 import NavBar  from '../components/NavBar';
 import ProductGrid from '../components/product/ProductGrid';
 
-const Product = () => { 
+const ProductCollections = () => { 
     return( 
         <div>
             <AlertBanner alertText={{message: 'this is an alert message for customer'}} />
@@ -21,4 +21,4 @@ const Product = () => {
     ); 
 }
 
-export default Product; 
+export default ProductCollections; 

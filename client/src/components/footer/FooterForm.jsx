@@ -1,18 +1,23 @@
 import { useState } from "react";
-
-const ContactForm = () => { 
+import Button from "../Button";
+const FooterForm = () => { 
     const [email, setEmail] = useState(''); 
     return (
-        <form>
-              <input type='text'
+        <form className="flex flex-row gap-2">
+
+            <input 
+            className="rounded-md"
+            type='text'
             name='email'
             placeholder='email'
             value={email}
             onChange={e => setEmail(e.target.value)}
             />
-            <button type='submit'>Contact</button>
+
+            <Button text={'Contact'} type='submit' />
+
         </form>
     ); 
 }
 
-export default ContactForm; 
+export default FooterForm; 

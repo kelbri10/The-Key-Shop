@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "../components/Button";
 import Footer from '../components/footer/Footer'; 
+import NavBar from "../components/NavBar";
 import '../index.css'; 
 
 const ContactForm = () => { 
@@ -26,8 +27,9 @@ const ContactForm = () => {
             reference for input related documentation: 
             https://react.dev/reference/react-dom/components/input
             */}
+            <NavBar />
 
-            <h1 className="text-2xl py-4">Contact Us</h1>
+            <h1 className="text-2xl py-4">Contact Us 👋 </h1>
 
             <form className="flex flex-col items-center gap-8"
             onSubmit={handleSubmit} >
@@ -77,6 +79,8 @@ const ContactForm = () => {
 
                 <Button text={'submit'} type='submit' />
             </form>
+
+            <Footer/>
         </>
     )
 }
