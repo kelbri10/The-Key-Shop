@@ -7,7 +7,7 @@ const Product = () => {
     return( 
         <div>
             <AlertBanner alertText={{message: 'this is an alert message for customer'}} />
-            <NavBar />
+           
             <h1>Product Collections </h1>
             
             {/* TODO: 

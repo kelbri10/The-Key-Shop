@@ -5,18 +5,17 @@ import '../index.css';
 
 const ContactForm = () => { 
     const [customerInformation, setCustomerInformation] = useState({
-        name: '', 
+        firstName: '', 
+        lastName:'', 
         email: '', 
         orderNumber: '', 
-        subject: ''
+        subject: '', 
+        message:''
     }); 
-    // const [customerName, setCustomerName] = useState({firstName: '', lastName: ''}); 
-    // const [email, setEmail] = useState(''); 
-    // const [orderNumber, setOrderNumber] = useState(''); 
-    // const [subject, setSubject] = useState(''); 
 
-    const handleSubmit = (e) => { 
+    const handleSubmit = () => { 
         console.log(customerInformation); 
+        //need conditional that  checks to make sure none of the values are empty
     }
     return (
         <>
@@ -28,44 +27,56 @@ const ContactForm = () => {
             https://react.dev/reference/react-dom/components/input
             */}
 
-            <form className="flex flex-col items-center gap-2"
-            onSubmit={handleSubmit} >
+            <h1 className="text-2xl py-4">Contact Us</h1>
 
-                <input className="border-2 border-black"
+            <form className="flex flex-col items-center gap-8"
+            onSubmit={handleSubmit} >
+            
+                <input className="border-2 border-stone-500 rounded-md w-1/3 p-2"
                 type='text'
-                name='name'
-                placeholder='Please enter first and last name on the order.'
-                value={customerInformation.name}
-                onChange={e => setCustomerInformation({...customerInformation, name: e.target.value})}
+                name='firstName'
+                placeholder='First Name'
+                value={customerInformation.firstName}
+                onChange={e => setCustomerInformation({...customerInformation, firstName: e.target.value})}
                 />
-                
-                <input className="border-2 border-black" 
+                <input className="border-2 border-stone-500 rounded-md w-1/3 p-2"
+                type='text'
+                name='lastName'
+                placeholder='Last Name'
+                value={customerInformation.lastName}
+                onChange={e => setCustomerInformation({...customerInformation, lastName: e.target.value})}
+                />
+                <input className="border-2 border-stone-500 rounded-md  w-1/3 p-2" 
                 type='text'
                 name='email'
                 placeholder='E-mail Address'
                 value={customerInformation.email}
                 onChange={e => setCustomerInformation({...customerInformation, email: e.target.value})}
                 />
-                <input className="border-2 border-black"
+                <input className="border-2 border-stone-500 rounded-md  w-1/3 p-2"
                 type='text'
                 name='orderNumber'
                 placeholder='Order Number'
                 value={customerInformation.orderNumber}
                 onChange={e => setCustomerInformation({...customerInformation, orderNumber: e.target.value})}
                 />
-                <input className="border-2 border-black"
+                <input className="border-2 border-stone-500 rounded-md  w-1/3 p-2"
                 type='text'
                 name='subject'
                 placeholder='Subject'
                 value={customerInformation.subject}
                 onChange={e => setCustomerInformation({...customerInformation, subject: e.target.value})}
                 />
+                <input className="border-2 border-stone-500 rounded-md  w-1/3 p-2"
+                type='text'
+                name='message'
+                placeholder='Message'
+                value={customerInformation.message}
+                onChange={e => setCustomerInformation({...customerInformation, message: e.target.value})}
+                />
 
                 <Button text={'submit'} type='submit' />
             </form>
-
-            
-            <Footer />
         </>
     )
 }
