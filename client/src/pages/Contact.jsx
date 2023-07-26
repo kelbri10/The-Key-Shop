@@ -20,18 +20,13 @@ const ContactForm = () => {
     }
     return (
         <>
-            {/* TODO: add form with the following input fields 
-            - attach files option 
-            - add interactivity for submit button
-
-            reference for input related documentation: 
-            https://react.dev/reference/react-dom/components/input
-            */}
             <NavBar />
 
-            <h1 className="text-2xl py-4">Contact Us 👋 </h1>
+            <h1 className="text-2xl text-center py-4">Contact Us 👋 </h1>
 
-            <form className="flex flex-col items-center gap-8"
+            <p className="text-center">Check out our FAQ to find our customers' most common questions. If you need further assistance, complete the form below. Responses take anywhere between 2-5 days</p>
+
+            <form className="flex flex-col items-center gap-8 mt-8"
             onSubmit={handleSubmit} >
             
                 <input className="border-2 border-stone-500 rounded-md w-1/3 p-2"

@@ -6,7 +6,7 @@ const FooterForm = () => {
         <form className="flex flex-row gap-2">
 
             <input 
-            className="rounded-md"
+            className="border-2 border-stone-500 rounded-md p-2"
             type='text'
             name='email'
             placeholder='email'

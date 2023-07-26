@@ -2,17 +2,13 @@ import FooterForm from "./FooterForm";
 
 const Footer = () => { 
     return(
-        <div className="w-full bg-slate-400 m-0">
-            <div className="bg-slate-600 mt-8 flex flex-row justify-around align-center">
-                <p>Stay updated with our newsletter</p>
+        <div className=" bg-cyan-100 bottom-0 w-full mt-8">
+            <div className="bg-cyan-200 py-4 flex flex-row justify-around items-center">
+                <p className="font-bold text-cyan-700">Stay updated with our newsletter</p>
                 <FooterForm /> 
             </div>
 
-            <div>
-                <p>logo here</p>
-            </div>
-
-            <div className="flex flex-row justify-start text-left">
+            <div className="flex flex-row justify-start text-left gap-8 text-cyan-700">
                 <ul>
                     <li>Shop</li>
                     <li>My account</li>

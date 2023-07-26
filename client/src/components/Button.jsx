@@ -1,7 +1,7 @@
 const Button = ({text}) => {  
     return ( 
         <button 
-        className="bg-cyan-700 hover:bg-cyan-500 active:bg-cyan-900 text-stone-100 px-4 py-2 rounded-md">
+        className="bg-cyan-700 hover:bg-cyan-500 active:bg-cyan-900 text-stone-100 px-6 py-2 rounded-md">
             {text}
         </button>
     )

@@ -4,7 +4,7 @@ const Section = () => {
     const sectionItems = sectionFeatures.map(feature => 
         <section key={feature.id}>
 
-            <h1>{feature.heading}</h1>
+            <h1 className="text-2xl">{feature.heading}</h1>
 
             <p>{feature.tagline}</p>
 
@@ -13,7 +13,7 @@ const Section = () => {
         
     ); 
 
-    return <>{sectionItems}</>
+    return <div className="grid grid-cols-2 gap-4">{sectionItems}</div>
 }
 
 export default Section; 
