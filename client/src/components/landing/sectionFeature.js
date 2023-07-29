@@ -10,7 +10,7 @@ const sectionFeatures = [
         id: 1, 
         heading: "Tofu 65 Keyboard", 
         tagline: "quis varius quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse", 
-        imgLink: "https://placehold.co/400x500",
+        imgLink: "https://kbdfans.com/cdn/shop/products/pc_900x.webp?v=1669787022",
         buttonText: "shop now"
     }, 
     // {

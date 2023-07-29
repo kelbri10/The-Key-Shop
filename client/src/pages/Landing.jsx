@@ -4,10 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons"
 import HeroSection from "../components/landing/HeroSection"
 import Footer from "../components/footer/Footer"
+import AlertBanner from "../components/AlertBanner"
 
 const Landing = () => { 
     return (
         <div>
+            <AlertBanner alertText={{message: "Free shipping for orders over $100"}}/>
             <NavBar />
 
             <div className="">
@@ -19,17 +21,17 @@ const Landing = () => {
                     
                     <div className="grid grid-cols-3 ">
                         <div>
-                            <img className="hover:shadow-lg"src='https://source.unsplash.com/random/500x400/?keyboard' />
+                            <img className="rounded-md hover:shadow-lg"src='https://source.unsplash.com/random/500x400/?keyboard' />
                             <p className="py-4"><a href='#'>Keyboards </a><FontAwesomeIcon icon={faArrowRightLong} /></p>
                         </div>
 
                         <div>
-                            <img src='https://source.unsplash.com/random/500x400/?keyboard' />
+                            <img className="rounded-md hover:shadow-lg" src='https://source.unsplash.com/random/500x400/?keyboard' />
                             <p className="py-4"><a href='#'>Keycaps </a><FontAwesomeIcon icon={faArrowRightLong} /></p>
                         </div>
 
                         <div>
-                            <img src='https://source.unsplash.com/random/500x400/?keyboard' />
+                            <img className="rounded-md hover:shadow-lg" src='https://source.unsplash.com/random/500x400/?keyboard' />
                             <p className="py-4"><a href='#'>Switches </a><FontAwesomeIcon icon={faArrowRightLong} /></p>
                         </div>
                     </div>
