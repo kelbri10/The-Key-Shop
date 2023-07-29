@@ -8,7 +8,7 @@ const Footer = () => {
                 <FooterForm /> 
             </div>
 
-            <div className="flex flex-row justify-start text-left gap-8 text-cyan-700">
+            <div className="flex flex-row justify-start text-left text-cyan-700">
                 <ul>
                     <li>Shop</li>
                     <li>My account</li>

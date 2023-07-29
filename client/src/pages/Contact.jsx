@@ -19,7 +19,7 @@ const ContactForm = () => {
         //need conditional that  checks to make sure none of the values are empty
     }
     return (
-        <>
+        <div className="h-full">
             <NavBar />
 
             <h1 className="text-2xl text-center py-4">Contact Us 👋 </h1>
@@ -76,7 +76,7 @@ const ContactForm = () => {
             </form>
 
             <Footer/>
-        </>
+        </div>
     )
 }
 

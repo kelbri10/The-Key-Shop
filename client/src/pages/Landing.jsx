@@ -10,27 +10,27 @@ const Landing = () => {
         <div>
             <NavBar />
 
-            <div className="m-8">
+            <div className="">
                 <HeroSection />
                 <Section />
 
-                <section className="mt-10">
+                <section className="px-10 py-14">
                     <h2 className="text-4xl mb-4">Featured Collections</h2>
                     
-                    <div className="grid grid-cols-3">
+                    <div className="grid grid-cols-3 ">
                         <div>
                             <img className="hover:shadow-lg"src='https://source.unsplash.com/random/500x400/?keyboard' />
-                            <p><a href='#'>category 1</a><FontAwesomeIcon icon={faArrowRightLong} /></p>
+                            <p className="py-4"><a href='#'>Keyboards </a><FontAwesomeIcon icon={faArrowRightLong} /></p>
                         </div>
 
                         <div>
                             <img src='https://source.unsplash.com/random/500x400/?keyboard' />
-                            <p><a href='#'>category 2</a><FontAwesomeIcon icon={faArrowRightLong} /></p>
+                            <p className="py-4"><a href='#'>Keycaps </a><FontAwesomeIcon icon={faArrowRightLong} /></p>
                         </div>
 
                         <div>
                             <img src='https://source.unsplash.com/random/500x400/?keyboard' />
-                            <p><a href='#'>category 3 </a><FontAwesomeIcon icon={faArrowRightLong} /></p>
+                            <p className="py-4"><a href='#'>Switches </a><FontAwesomeIcon icon={faArrowRightLong} /></p>
                         </div>
                     </div>
                 </section>

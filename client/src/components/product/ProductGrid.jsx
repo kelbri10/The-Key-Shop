@@ -9,7 +9,12 @@ const ProductGrid = () => {
     const [filterTags, setFilterTags]= useState([]);  
 
     const handleChange = (e) => {
+        e.preventDefault(); 
         setIsChecked(!isChecked);   
+
+        if(isChecked === true){ 
+            setProducts(products.filter(product => product.type === e.target.value))
+        }
     }
 
     // const handleChange = (e) => { 

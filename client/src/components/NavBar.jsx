@@ -15,12 +15,17 @@ const NavBar = () => {
         //    </ul>
         // </nav>
 
-        <nav>
-            <ul className="flex flex-row justify-end gap-4 m-4">
+        <nav className="flex flex-row justify-between m-4">
+            <ul className="flex flex-row gap-4 ">
                 <li className="hover:underline hover:text-cyan-600"> <Link to={"/home"}>Home</Link></li>
                 <li className="hover:underline hover:text-cyan-600"> <Link to={"/shop"}>Shop</Link></li>
                 <li className="hover:underline hover:text-cyan-600"> <Link to={"/contact"}>Contact</Link></li>
             </ul>
+
+            <div className="space-x-4">
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+                <FontAwesomeIcon icon={faCartShopping} />
+            </div>
         </nav>
     )
 }
