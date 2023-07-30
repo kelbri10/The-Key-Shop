@@ -19,7 +19,7 @@ const Landing = () => {
                 <section className="px-10 py-14">
                     <h2 className="text-4xl mb-4">Featured Collections</h2>
                     
-                    <div className="grid grid-cols-3 ">
+                    <div className="grid grid-cols-3 place-items-center">
                         <div>
                             <img className="rounded-md hover:shadow-lg"src='https://source.unsplash.com/random/500x400/?keyboard' />
                             <p className="py-4"><a href='#'>Keyboards </a><FontAwesomeIcon icon={faArrowRightLong} /></p>

@@ -8,7 +8,8 @@ const ProductCollections = () => {
         <div>
             <AlertBanner alertText={{message: 'this is an alert message for customer'}} />
            
-            <h1>Product Collections </h1>
+            <NavBar />
+            <h1 className="text-6xl p-8"> Collections </h1>
             
             {/* TODO: 
             -drop down menu to sort the products

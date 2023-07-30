@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'; 
 import axios from "axios";
-
+import Footer from "../footer/Footer"; 
 
 const ProductGrid = () => { 
 
@@ -42,10 +42,11 @@ const ProductGrid = () => {
 
     let gridItems = products.map(product => (
         <div key={product._id} data-filter-type={product.type}>
-            <img src='https://source.unsplash.com/random/400x400/?keyboard' alt="random unsplash image"/>
+            <img className="rounded-md"
+            src='https://source.unsplash.com/random/400x400/?keyboard' alt="random unsplash image"/>
             <p>{product.name}</p>
             <p>{product.brand}</p>
-            <p>{product.price["$numberDecimal"]}</p>
+            <p className="font-bold">${product.price["$numberDecimal"]}</p>
         </div>
     )); 
 
@@ -53,14 +54,15 @@ const ProductGrid = () => {
     let uniqueProductTypes = [...new Set(productTypes)]; 
     let checkboxes = uniqueProductTypes.map(productType => (
         <div>
-            <input key={productType} type="checkbox" 
+            <input
+                key={productType} type="checkbox" 
                 id={productType}
                 name={productType}
                 value={productType} 
                 onChange={handleChange}
                 checked={isChecked}
                />
-            <label htmlFor={productType}>{productType}</label>
+            <label htmlFor={productType}> {productType}</label>
         </div>
 
     ))
@@ -74,13 +76,15 @@ const ProductGrid = () => {
     // let filteredProductsGridItems = products.filter(product => product.type === )
     return(
         <>
-            <div className="checkbox-grid">
+            <div className="flex flex-row gap-4 px-10">
                 {checkboxes}
             </div>
 
-            <div className="product-grid">
+            <div className="grid grid-cols-3 gap-6 p-4 place-items-center">
                 {gridItems}
             </div>
+
+            <Footer />
         </>
     )
 
