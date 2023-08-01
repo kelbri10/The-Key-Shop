@@ -2,7 +2,7 @@ import Button from '../components/Button';
 import AlertBanner from '../components/AlertBanner'; 
 import NavBar  from '../components/NavBar';
 import ProductGrid from '../components/product/ProductGrid';
-
+import Footer from "../components/footer/Footer"; 
 const ProductCollections = () => { 
     return( 
         <div>
@@ -18,6 +18,7 @@ const ProductCollections = () => {
             
             <ProductGrid />
             
+            <Footer />
         </div>
     ); 
 }

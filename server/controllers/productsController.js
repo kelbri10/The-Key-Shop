@@ -1,3 +1,4 @@
+import { ObjectId } from 'mongodb';
 import db from '../db/connectToDb.js'; 
 
 let productCollection = db.collection('products'); 
@@ -16,12 +17,21 @@ const getFilteredProducts = async (productType) => {
     return filteredResults; 
 }
 
-const getProductByName = async (productName) => { 
-     let filteredProduct = await productCollection.findOne({ 
-        name: productName
+const getProductsByBrand = async (brand) => { 
+     let filteredProduct = await productCollection.find({ 
+        brand: brand
     }).toArray(); 
 
     return filteredProduct; 
 }
 
-export { getAllProducts, getFilteredProducts, getProductByName}; 
+const getProductById = async (id) => {  
+    let searchId = new ObjectId(id); 
+    let filteredProduct = await productCollection.find({ 
+        _id: searchId
+    }).toArray(); 
+    
+    return filteredProduct; 
+}
+
+export { getAllProducts, getFilteredProducts, getProductsByBrand, getProductById}; 

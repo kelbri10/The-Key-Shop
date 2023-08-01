@@ -1,35 +1,23 @@
 import { useState, useEffect } from 'react'; 
 import axios from "axios";
-import Footer from "../footer/Footer"; 
 
 const ProductGrid = () => { 
 
     const [products, setProducts] = useState([]);  
-    const [isChecked, setIsChecked] = useState(false); 
-    const [filterTags, setFilterTags]= useState([]);  
+    const [isChecked, setIsChecked] = useState(true); 
+    const [filteredProducts, setFilteredProdcuts]= useState([]);  
 
     const handleChange = (e) => {
-        e.preventDefault(); 
-        setIsChecked(!isChecked);   
-
-        if(isChecked === true){ 
-            setProducts(products.filter(product => product.type === e.target.value))
-        }
+      //check whether a tag or multiple tags are checked 
+       //if a tag is checked, display filtered results 
+       //if no tag is checked, return all products
+       let filter = e.target.value; 
+       setIsChecked(e.target.checked); 
+       let filteredArr = products.filter(product => product.type === filter); 
+       console.log(filteredArr); 
+       setFilteredProducts(filteredArr);  
     }
 
-    // const handleChange = (e) => { 
-    //     if(e.target.checked){ 
-    //         setFilterTags([...filterTags, e.target.value])
-    //         console.log(filterTags)
-    //     } else { 
-    //         setFilterTags(
-    //             filterTags.filter(filterTag => filterTag !== e.target.value)
-    //         )
-    //         console.log(filterTags)
-    //     }
-    // }
-
-    //when a filter is checked, the gridItems are filtered in order to reflect the true/false value of the filter clicked
     const fetchProducts = async() => { 
         let response = await axios('http://localhost:3080/products'); 
         let products = await response.data; 
@@ -41,7 +29,7 @@ const ProductGrid = () => {
     }, []); 
 
     let gridItems = products.map(product => (
-        <div key={product._id} data-filter-type={product.type}>
+        <div key={product._id}>
             <img className="rounded-md"
             src='https://source.unsplash.com/random/400x400/?keyboard' alt="random unsplash image"/>
             <p>{product.name}</p>
@@ -52,19 +40,13 @@ const ProductGrid = () => {
 
     let productTypes = products.map(product => product.type); 
     let uniqueProductTypes = [...new Set(productTypes)]; 
-    let checkboxes = uniqueProductTypes.map(productType => (
+    let checkboxes = uniqueProductTypes.map((productType, index) => (
         <div>
-            <input
-                key={productType} type="checkbox" 
-                id={productType}
-                name={productType}
-                value={productType} 
-                onChange={handleChange}
-                checked={isChecked}
-               />
-            <label htmlFor={productType}> {productType}</label>
+            <label>
+            <input type="radio" name="filter" value={productType} onChange={handleChange}/> 
+            {productType}
+            </label>
         </div>
-
     ))
 
     // add a sidebar that has the buttons to help filter the products and sets the data-attibute-type to keyboards, switches, etc 
@@ -75,17 +57,29 @@ const ProductGrid = () => {
 
     // let filteredProductsGridItems = products.filter(product => product.type === )
     return(
-        <>
-            <div className="flex flex-row gap-4 px-10">
+        <div className="grid grid-cols-2">
+            <div className="flex flex-col w-1/5 bg-slate-300">
+                <p>filter tags</p>
                 {checkboxes}
             </div>
 
-            <div className="grid grid-cols-3 gap-6 p-4 place-items-center">
+            <div className="grid grid-cols-3 w-4/5 bg-slate-500">
                 {gridItems}
             </div>
+        </div>
+        
+        // <div className="grid grid-cols-2 justify-items-center bg-slate-600">
+        //     <div className="flex flex-col w-1/3 bg-slate-200 items-center h-fit">
+        //         <p>filter tags</p>
+        //         {checkboxes}
+        //     </div>
 
-            <Footer />
-        </>
+        //     <div className="grid grid-cols-3 gap-6 p-4 place-items-center bg-slate-500">
+        //         {gridItems}
+        //     </div>
+
+        // </div>
+        
     )
 
 }
