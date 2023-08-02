@@ -32,7 +32,7 @@ const ProductGrid = () => {
         <div key={product._id}>
             <img className="rounded-md"
             src='https://source.unsplash.com/random/400x400/?keyboard' alt="random unsplash image"/>
-            <p>{product.name}</p>
+            <p><a href={`/products/${product._id}`}>{product.name}</a></p>
             <p>{product.brand}</p>
             <p className="font-bold">${product.price["$numberDecimal"]}</p>
         </div>
