@@ -57,28 +57,16 @@ const ProductGrid = () => {
 
     // let filteredProductsGridItems = products.filter(product => product.type === )
     return(
-        <div className="grid grid-cols-2">
-            <div className="flex flex-col w-1/5 bg-slate-300">
-                <p>filter tags</p>
+        <div className="flex flex-row justify-center gap-8 p-10">
+            <div>
+                <p>filters</p>
                 {checkboxes}
             </div>
 
-            <div className="grid grid-cols-3 w-4/5 bg-slate-500">
+            <div className="w-fit grid grid-cols-1 place-items-center md:grid-cols-2 md:gap-8 lg:grid-cols-3">
                 {gridItems}
             </div>
         </div>
-        
-        // <div className="grid grid-cols-2 justify-items-center bg-slate-600">
-        //     <div className="flex flex-col w-1/3 bg-slate-200 items-center h-fit">
-        //         <p>filter tags</p>
-        //         {checkboxes}
-        //     </div>
-
-        //     <div className="grid grid-cols-3 gap-6 p-4 place-items-center bg-slate-500">
-        //         {gridItems}
-        //     </div>
-
-        // </div>
         
     )
 
