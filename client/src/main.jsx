@@ -13,21 +13,21 @@ import ProductDetail from './components/product/ProductDetail.jsx'
 
 const router = createBrowserRouter([
   { 
-    path: "/home", 
+    path: "/", 
     element: <Landing />
   }, 
   {
     path: "/shop", 
-    element: <ProductCollections />
+    element: <ProductCollections />, 
   }, 
+  { 
+    path: "/shop/:id", 
+    element: <ProductDetail />
+  },
   { 
     path: "/contact", 
     element: <ContactForm />
   }, 
-  { 
-    path: "/products/:id",
-    element: <ProductDetail />
-  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -17,7 +17,7 @@ const NavBar = () => {
         // </nav>
         <nav className="flex flex-row justify-between px-10 py-6">
             <ul className="flex flex-row gap-4 ">
-                <li className="hover:underline hover:text-cyan-600"> <Link to={"/home"}>Home</Link></li>
+                <li className="hover:underline hover:text-cyan-600"> <Link to={"/"}>Home</Link></li>
                 <li className="hover:underline hover:text-cyan-600"> <Link to={"/shop"}>Shop</Link></li>
                 <li className="hover:underline hover:text-cyan-600"> <Link to={"/contact"}>Contact</Link></li>
             </ul>
