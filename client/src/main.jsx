@@ -9,7 +9,7 @@ import Landing from './pages/Landing.jsx'
 import './index.css'
 import ProductCollections from './pages/Shop.jsx'
 import ContactForm from './pages/Contact.jsx'
-import ProductDetail from './components/product/ProductDetail.jsx'
+import Product from './pages/Product.jsx'
 
 const router = createBrowserRouter([
   { 
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
   }, 
   { 
     path: "/shop/:id", 
-    element: <ProductDetail />
+    element: <Product />
   },
   { 
     path: "/contact", 
