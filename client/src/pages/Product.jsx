@@ -23,26 +23,20 @@ const Product = () => {
 
     return (
         <div className="">
-            <AlertBanner alertText={{message: "free shipping on orders over $25"}}/>
-            <NavBar /> 
-            <div className="">
-                {product.map(el => (
-                    <div>
-                        <BreadCrumb product={el.name}/>
+            {product.map(el => (
+                <div>
+                    <BreadCrumb product={el.name}/>
 
-                        <div className="w-fit mx-auto grid grid-cols-2 gap-10 my-10">
-                            <img className="rounded-md" src='https://source.unsplash.com/random/500x400/?keyboard' />   
-                            
-                            <div>
-                                <h1 className="text-4xl mb-4">{el.name}</h1>
-                                <h2>{el.brand}</h2>
-                            </div>
-                        </div> 
-                    </div>
-                    ))}
-            </div>
-
-            <Footer />
+                    <div className="w-fit mx-auto grid grid-cols-2 gap-10 my-10">
+                        <img className="rounded-md" src='https://source.unsplash.com/random/500x400/?keyboard' />   
+                        
+                        <div>
+                            <h1 className="text-4xl mb-4">{el.name}</h1>
+                            <h2>{el.brand}</h2>
+                        </div>
+                    </div> 
+                </div>
+                ))}
         </div>
     )
 }

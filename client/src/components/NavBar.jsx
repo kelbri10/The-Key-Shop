@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => { 
     return(
@@ -17,9 +17,9 @@ const NavBar = () => {
         // </nav>
         <nav className="flex flex-row justify-between px-10 py-6">
             <ul className="flex flex-row gap-4 ">
-                <li className="hover:underline hover:text-cyan-600"> <Link to={"/"}>Home</Link></li>
-                <li className="hover:underline hover:text-cyan-600"> <Link to={"/shop"}>Shop</Link></li>
-                <li className="hover:underline hover:text-cyan-600"> <Link to={"/contact"}>Contact</Link></li>
+                <li className="hover:underline hover:text-cyan-600"> <NavLink to={"/"}>Home</NavLink></li>
+                <li className="hover:underline hover:text-cyan-600"> <NavLink to={"/shop/all"}>Shop</NavLink></li>
+                <li className="hover:underline hover:text-cyan-600"> <NavLink to={"/contact"}>Contact</NavLink></li>
             </ul>
 
             <div className="space-x-4">

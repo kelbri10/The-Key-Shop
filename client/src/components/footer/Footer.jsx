@@ -1,5 +1,5 @@
 import FooterForm from "./FooterForm"; 
-
+import { Link } from "react-router-dom"; 
 const Footer = () => { 
     return(
         <div className=" bg-cyan-600 bottom-0 w-full">
@@ -10,10 +10,10 @@ const Footer = () => {
 
             <div className="flex flex-row justify-start text-left px-4 py-8 text-cyan-50">
                 <ul>
-                    <li>Shop</li>
+                    <li><Link to={"/shop"}>Shop</Link></li>
                     <li>My account</li>
-                    <li>Contact</li>
-                    <li>Frequently Asked Questions</li>
+                    <li><Link to={"/contact"}>Contact</Link></li>
+                    <li><Link to={"/faq"}>Frequently Asked Questions</Link></li>
                 </ul>
             </div>
 
