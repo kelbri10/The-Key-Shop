@@ -10,7 +10,7 @@ const Footer = () => {
 
             <div className="flex flex-row justify-start text-left px-4 py-8 text-cyan-50">
                 <ul>
-                    <li><Link to={"/shop"}>Shop</Link></li>
+                    <li><Link to={"/shop/all"}>Shop</Link></li>
                     <li>My account</li>
                     <li><Link to={"/contact"}>Contact</Link></li>
                     <li><Link to={"/faq"}>Frequently Asked Questions</Link></li>

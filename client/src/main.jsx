@@ -10,9 +10,9 @@ import Landing from './pages/Landing.jsx'
 import './index.css'
 import Shop from './pages/Shop.jsx'
 import ContactForm from './pages/Contact.jsx'
-import Product from './pages/Product.jsx'
+import Product, { productDetailsLoader } from './pages/fragments/Product.jsx'
 import Questions from './pages/FAQ.jsx'
-import ProductGrid from './components/product/ProductGrid.jsx'
+import ProductGrid, { productsLoader } from './pages/fragments/ProductGrid.jsx'
 
 const router= createBrowserRouter(
   createRoutesFromElements(
@@ -20,39 +20,20 @@ const router= createBrowserRouter(
       <Route path="/" element={<Landing />} />
       <Route path="contact" element={<ContactForm />} />
       <Route path="shop" element={<Shop />}> 
-        <Route path="all" element={<ProductGrid />} />
-        <Route path=":id" element={<Product />} />
+        <Route path="all" 
+        element={<ProductGrid/>}
+        loader={productsLoader}
+        />
+        <Route 
+        path=":id" 
+        element={<Product />}
+        loader={productDetailsLoader} />
       </Route>
       <Route path="faq" element={<Questions />} />
     </Route>
   )
 )
 
-// const router = createBrowserRouter([
-//   { 
-//     path: "/", 
-//     element: <Landing />
-//   }, 
-//   {
-//     path: "/shop", 
-//     element: <Shop />, 
-//     children: ({
-//       path:":id"
-//     })
-//   }, 
-//   { 
-//     path: "/shop/:id", 
-//     element: <Product />
-//   },
-//   { 
-//     path: "/contact", 
-//     element: <ContactForm />
-//   }, 
-//   {
-//     path: "/faq", 
-//     element: <Questions />
-//   }
-// ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
