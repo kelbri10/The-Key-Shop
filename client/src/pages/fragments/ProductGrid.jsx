@@ -1,19 +1,12 @@
-import { Link, useLoaderData } from "react-router-dom"; 
+import { useLoaderData } from "react-router-dom"; 
 import axios from "axios";
-import Button from '../../components/Button';
+import ProductCard from "./ProductCard";
 
 const ProductGrid = () => { 
     const products = useLoaderData(); 
 
     let gridItems = products.map(product => (
-        <div key={product._id}>
-            <img className="rounded-md"
-            src='https://source.unsplash.com/random/400x400/?keyboard' alt="random unsplash image"/>
-            <p><Link to={`/shop/${product._id}`}>{product.name}</Link></p>
-            <p>{product.brand}</p>
-            <p className="font-bold">${product.price["$numberDecimal"]}</p>
-            <Button text='Add to Cart'/>
-        </div>
+        <ProductCard product={product} />
     )); 
 
     return(
