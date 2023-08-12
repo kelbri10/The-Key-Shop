@@ -1,6 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
-import { useLoaderData, useParams } from "react-router-dom"; 
+import { useLoaderData } from "react-router-dom"; 
 import BreadCrumb from "../../components/Breadcrumb";
 import Button from "../../components/Button";
 
