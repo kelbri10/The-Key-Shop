@@ -1,8 +1,12 @@
 const CheckoutCard = ({item}) => { 
     return( 
-        <div>
-            <p>{item.name}</p>
-            <p>{item.price}</p>
+        <div className="w-3/4 grid grid-cols-2 place-content-center ">
+            <div className="">
+                <p>{item.name}</p>
+                <p>{item.price}</p>
+            </div>
+            
+           
         </div>
     )
 }

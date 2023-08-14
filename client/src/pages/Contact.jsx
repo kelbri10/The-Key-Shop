@@ -26,7 +26,7 @@ const ContactForm = () => {
 
             <p className="text-center">Check out our FAQ to find our customers' most common questions. If you need further assistance, complete the form below. Responses take anywhere between 2-5 days</p>
 
-            <form className="flex flex-col items-center gap-8 mt-8"
+            <form className="flex flex-col items-center gap-8 mt-8 mb-8"
             onSubmit={handleSubmit} >
             
                 <input className="border-2 border-stone-500 rounded-md w-1/3 p-2"

@@ -8,7 +8,7 @@ import AlertBanner from "../components/AlertBanner"
 
 const Landing = () => { 
     return (
-        <div>
+        <div className="">
             <AlertBanner alertText={{message: "Free shipping for orders over $100"}}/>
             <NavBar />
 

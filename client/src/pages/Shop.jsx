@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom';
 const Shop = () => { 
     return( 
         <div>
-            <AlertBanner alertText={{message: 'this is an alert message for customer'}} />
+            <AlertBanner alertText={{message: 'Free shipping for orders over $100'}} />
            
             <NavBar />
            
