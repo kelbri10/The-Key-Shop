@@ -2,10 +2,9 @@ import Button from "../Button";
 import sectionFeatures from "./sectionFeature";
 const Section = () => { 
     const sectionItems = sectionFeatures.map(feature => 
-        <div className="grid grid-cols-2 gap-4 px-10 py-14 place-items-center">
+        <div key={feature.id} className="grid grid-cols-2 gap-4 px-10 py-14 place-items-center">
 
-            <section key={feature.id}
-            className="">
+            <section>
                 <h1 className="text-2xl">{feature.heading}</h1>
 
                 <p className="pb-4">{feature.tagline}</p>

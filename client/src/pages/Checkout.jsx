@@ -8,14 +8,17 @@ import Button from "../components/Button";
 import OrderDetails from "./fragments/OrderDetails";
 
 const Checkout = () => { 
-    const { items } = useContext(CartContext); 
+    const {items} = useContext(CartContext); 
     let total = 0; 
 
     const calculateTotalPrice = () => { 
+
         if(items.length > 0 ){ 
-            let prices = items.map(item => Math.floor(item.price * 100) / 100);  
-            let sum = prices.reduce((total, p) => total + p); 
-            return total = sum.toFixed(2); 
+            items.forEach(item => {
+                let result = (Math.floor(item.price * 100) / 100) * item.qty; 
+                total = total + result
+            })
+            return total = total.toFixed(2); 
         }
 
         return total; 
@@ -42,12 +45,15 @@ const Checkout = () => {
                 {items.length > 0 ? 
                     <div className="flex justify-evenly"> 
                         <div>
-                            {items.map(item => <CheckoutCard item={item} /> )}
+                            {items.map(item => 
+                                <div>
+                                    <CheckoutCard key={item.id} item={item} />
+                                </div>
+                            )}
                         </div>
                         
-                        <OrderDetails />
+                        <OrderDetails total={total}/>
                     </div>
-                    
                 : null}
               
                 

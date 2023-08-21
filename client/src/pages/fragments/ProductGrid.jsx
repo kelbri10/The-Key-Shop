@@ -6,7 +6,7 @@ const ProductGrid = () => {
     const products = useLoaderData(); 
 
     let gridItems = products.map(product => (
-        <ProductCard product={product} />
+        <ProductCard product={product} key={product._id}/>
     )); 
 
     return(
