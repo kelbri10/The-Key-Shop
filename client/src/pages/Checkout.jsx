@@ -27,11 +27,11 @@ const Checkout = () => {
     calculateTotalPrice(); 
 
     return(
-        <div className="">
+        <div className="flex flex-col h-screen">
             <NavBar />
             <h1 className="text-6xl p-8">Checkout</h1>
 
-            <div className="p-8 mb-10">
+            <div className="p-8 m-auto">
                 
                 {items.length === 0 ? 
                     <div className="text-center">
@@ -60,7 +60,10 @@ const Checkout = () => {
                 
                 
             </div>
-            <Footer />
+            <div className="h-10">
+                <Footer />
+            </div>
+           
         </div>
     )
 }
