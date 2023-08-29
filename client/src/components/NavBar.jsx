@@ -11,7 +11,7 @@ const NavBar = () => {
     const { items } = useContext(CartContext);  
     
     return(
-            <nav className="flex flex-row justify-between items-center px-10 py-4">
+            <nav className="border-solid border-b border-cyan-900 flex flex-row justify-between items-center px-10 py-4">
                 <ul className="flex flex-row gap-4 ">
                 <li className="hover:underline hover:text-cyan-600"> <NavLink to={"/"}>Home</NavLink></li>
                 <li className="hover:underline hover:text-cyan-600"> <NavLink to={"/shop/all"}>Shop</NavLink></li>

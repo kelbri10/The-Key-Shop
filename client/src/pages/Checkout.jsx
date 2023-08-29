@@ -31,7 +31,7 @@ const Checkout = () => {
             <NavBar />
             <h1 className="text-6xl p-8">Checkout</h1>
 
-            <div className="p-8 m-auto">
+            <div className="p-8 mb-auto">
                 
                 {items.length === 0 ? 
                     <div className="text-center">
@@ -43,8 +43,9 @@ const Checkout = () => {
                 
             
                 {items.length > 0 ? 
-                    <div className="flex justify-evenly"> 
-                        <div>
+                    <div className=""> 
+                        
+                        <div className="">
                             {items.map(item => 
                                 <div>
                                     <CheckoutCard key={item.id} item={item} />
@@ -55,7 +56,11 @@ const Checkout = () => {
                         <OrderDetails total={total}/>
                     </div>
                 : null}
-              
+
+                <button 
+                className="mt-10 bg-cyan-700 hover:bg-cyan-500 active:bg-cyan-900 text-stone-100 px-6 py-2 rounded-md">
+                    Proceed to Checkout
+                </button>
                 
                 
                 

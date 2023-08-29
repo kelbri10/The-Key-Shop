@@ -2,7 +2,7 @@ import Button from "../Button";
 import { Link } from "react-router-dom";
 const HeroSection = () => { 
     return(
-        <div className="grid grid-cols-2 place-items-center h-1/5">
+        <div className="grid grid-cols-2 place-items-center h-2/5">
             <div className="flex flex-col">
                 <h1 className="text-6xl">The Key Shop</h1>
                 <p className="py-4">Shop our favorite collections now</p>
@@ -13,7 +13,7 @@ const HeroSection = () => {
                 <img className="object-cover" src="https://source.unsplash.com/random/?keyboard" />
             </div>
             
-        </div>
+        </div> 
     )
 }
 

@@ -1,7 +1,7 @@
 const OrderDetails = ({total}) => { 
     return(
-        <div className="w-1/3">
-            <h2 className="text-2xl">Order Details</h2>
+        <div className="mt-10">
+            <div className="border-b mb-10"></div>
                             
             <div className="flex justify-between">
                 <p>Subtotal</p>
