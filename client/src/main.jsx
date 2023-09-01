@@ -15,6 +15,7 @@ import Product, { productDetailsLoader } from './pages/fragments/Product.jsx'
 import Questions from './pages/FAQ.jsx'
 import ProductGrid, { productsLoader } from './pages/fragments/ProductGrid.jsx'
 import { CartProvider } from './CartContext.jsx'
+import Cart from './pages/Cart.jsx'
 import Checkout from './pages/Checkout.jsx'
 
 const router= createBrowserRouter(
@@ -34,7 +35,8 @@ const router= createBrowserRouter(
           loader={productDetailsLoader} />
         </Route>
         <Route path="faq" element={<Questions />} />
-        <Route path="checkout" element={<Checkout />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="checkout" element={Checkout} />
       </Route>
       
   )
