@@ -11,7 +11,7 @@ const NavBar = () => {
     const { items } = useContext(CartContext);  
     
     return(
-            <nav className="border-solid border-b border-cyan-900 flex flex-row justify-between items-center px-10 py-4">
+            <nav className="border-solid border-b border-cyan-900 flex flex-row justify-evenly items-center px-10 py-4">
                 <h1 className="font-bold text-2xl">The Key Shop</h1>
                 <ul className="flex flex-row gap-4 ">
                 <li className="hover:underline hover:text-cyan-600"> <NavLink to={"/"}>Home</NavLink></li>
@@ -20,8 +20,7 @@ const NavBar = () => {
                 </ul>
 
                 <div className="flex flex-row items-center space-x-4">
-                    <FontAwesomeIcon icon={faMagnifyingGlass} />
-                    
+                   
                     <NavLink to={"/cart"}><FontAwesomeIcon icon={faCartShopping} /></NavLink>
                     <p>{items.length}</p>
                 </div>

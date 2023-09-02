@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
-
+import placeholderImg from "../../pages/images/krishdiphong-prayoonwongkasem-oxRLqxQ9v8o-unsplash.jpg"
 import { useContext } from "react";
 import CartContext from "../../CartContext";
 
 const ProductCard = ({product}) =>{ 
     const {addToCart} = useContext(CartContext);  
     return(
-         <div>
+         <div className="my-6">
             <img className="rounded-md"
-            src='https://source.unsplash.com/random/400x400/?keyboard' alt="random unsplash image"/>
+            src={placeholderImg} alt="random unsplash image"/>
             <p><Link to={`/shop/${product._id}`}>{product.name}</Link></p>
             <p>{product.brand}</p>
             <p className="font-bold">${product.price["$numberDecimal"]}</p>

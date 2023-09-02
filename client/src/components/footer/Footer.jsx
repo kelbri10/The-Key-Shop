@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 const Footer = () => { 
     return(
         <div className=" bg-cyan-600 bottom-0 w-full">
-            <div className="bg-cyan-200 text-cyan-700 py-4 flex flex-row justify-around items-center">
-                <p className="font-bold">Stay updated with our newsletter</p>
+            <div className="bg-cyan-200 text-cyan-700 py-4 flex flex-col lg:flex-row justify-around items-center">
+                <p className="font-bold pb-2 lg:pb-0">Stay updated with our newsletter</p>
                 <FooterForm /> 
             </div>
 

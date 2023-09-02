@@ -10,12 +10,6 @@ const Shop = () => {
             <AlertBanner alertText={{message: 'Free shipping for orders over $100'}} />
            
             <NavBar />
-           
-            
-            {/* TODO: 
-            -drop down menu to sort the products
-            -sidebar to filter what products looking at 
-            -product link to product details page */}
             
             <Outlet/>
             

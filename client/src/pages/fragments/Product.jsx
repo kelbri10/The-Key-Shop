@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useLoaderData } from "react-router-dom"; 
 import BreadCrumb from "../../components/Breadcrumb";
-import Button from "../../components/Button";
+import placeholderImg from "../../pages/images/wokey-factory-WKjazStSpUg-unsplash.jpg"
 import { useContext } from "react";
 import CartContext from "../../CartContext";
 
@@ -11,18 +11,18 @@ const Product = () => {
     return (
         <div className="">
             {product.map(el => (
-                <div>
+                <div key={el._id}>
                     <BreadCrumb product={el.name}/>
 
-                    <div className="flex justify-evenly my-10">
-                        <img className="rounded-md" src='https://source.unsplash.com/random/500x400/?keyboard' />   
+                    <div className="flex flex-col items-center md:flex-row md:gap-8 md:justify-evenly m-10 md:mx-10">
+                        <img className="rounded-md md:w-2/5" src={placeholderImg} width={500} />   
                         
-                        <div className="space-y-2 w-2/5">
-                            <h1 className="text-4xl mb-4">{el.name}</h1>
+                        <div className="space-y-2">
+                            <h1 className="text-4xl my-4">{el.name}</h1>
                             <h2>{el.brand}</h2>
-                            <p>{el.description}</p>
+                            <p className="mb-6">{el.description}</p>
 
-                            <div className="flex flex-row gap-2">
+                            <div className="flex flex-row gap-2 my-4">
                                 {el.type === "keyboard" ? el.availableColors.map(color => 
                                 
                                     <div key={color}>
@@ -40,7 +40,7 @@ const Product = () => {
                             </div>
 
                             <button onClick={()=> addToCart(el._id, el.name, el.price["$numberDecimal"])}
-                            className="bg-cyan-700 hover:bg-cyan-500 active:bg-cyan-900 text-stone-100 px-6 py-2 rounded-md">
+                            className="w-full md:w-2/5 bg-cyan-700 hover:bg-cyan-500 active:bg-cyan-900 text-stone-100 px-6 py-4 md:px-4 md:py-2 rounded-md">
                                 Add to Cart
                             </button>
                         
