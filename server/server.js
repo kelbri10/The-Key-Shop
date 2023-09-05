@@ -3,7 +3,7 @@ import morgan from 'morgan';
 import cors from 'cors'; 
 import productRouter from './routes/products.js'; 
 const app = express(); 
-const port = 3080; 
+const port = process.env.PORT || 3080; 
 
 
 app.use(cors());
