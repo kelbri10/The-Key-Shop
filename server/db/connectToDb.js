@@ -1,7 +1,7 @@
 import { MongoClient } from 'mongodb'; 
 import '../loadEnvironment.js'
 
-const connectionString = process.env.MONGODB_URI; 
+const connectionString = process.env.MONGODB_URI || ""; 
 
 const client = new MongoClient(connectionString); 
 
