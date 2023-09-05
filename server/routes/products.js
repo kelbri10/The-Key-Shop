@@ -13,28 +13,6 @@ productRouter.get(('/'), async (req, res) => {
 
 }); 
 
-// productRouter.get('/:type', async (req, res) =>{ 
-//     let productType = req.params.type; 
-
-//     try{ 
-//         let filteredResults = await getFilteredProducts(productType); 
-//         res.send(filteredResults).status(200);
-//     } catch(err) { 
-//         console.log(err); 
-//     }
-// }); 
-
-// productRouter.get('/:brand', async (req, res) => {
-//     let brand = req.params.brand; 
-
-//     try{ 
-//         let filteredProducts = await getProductsByBrand(brand);
-//         res.send(filteredProducts).status(200); 
-//     } catch(err) { 
-//         console.log(err); 
-//     }
-// }); 
-
 productRouter.get('/:id', async (req, res) => { 
     let id = req.params.id; 
 
