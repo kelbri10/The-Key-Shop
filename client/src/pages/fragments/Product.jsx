@@ -55,7 +55,7 @@ const Product = () => {
 //loader funtion 
 export const productDetailsLoader = async ({params}) => { 
     const { id } = params;  
-    let response = await axios(`http://localhost:3080/products/${id}`);
+    let response = await axios(`https://thekeyshop-api.onrender.com/products/${id}`);
     return response.data; 
 }
 

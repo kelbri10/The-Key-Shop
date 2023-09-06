@@ -44,7 +44,7 @@ const ProductGrid = () => {
 
 //loader function 
 export const productsLoader = async () => { 
-    let response = await axios('http://localhost:3080/products'); 
+    let response = await axios('https://thekeyshop-api.onrender.com/products'); 
     return response.data;
 }
 
