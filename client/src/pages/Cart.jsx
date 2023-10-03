@@ -1,5 +1,5 @@
 import CartContext, { CartProvider } from "../CartContext";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import Footer from "../components/footer/Footer"; 
@@ -8,23 +8,26 @@ import Button from "../components/Button";
 import OrderDetails from "./fragments/OrderDetails";
 
 const Cart = () => { 
-    const {items} = useContext(CartContext); 
-    let total = 0; 
+    const {items} = useContext(CartContext);
+    const [total, setTotal] = useState(0)
+    useEffect(() => { 
+    //maybe need to wrap this in a useEffect hook, with a dependency on if the items change
+        const calculateTotalPrice = () => { 
+            let temp = 0; 
+            if(items.length > 0 ){ 
+                items.forEach(item => {
+                    let result = (Math.floor(item.price * 100) / 100) * item.qty; 
+                    temp = temp + result
+                })
+                setTotal(temp.toFixed(2))
+                return total; 
+            }
 
-    const calculateTotalPrice = () => { 
-
-        if(items.length > 0 ){ 
-            items.forEach(item => {
-                let result = (Math.floor(item.price * 100) / 100) * item.qty; 
-                total = total + result
-            })
-            return total = total.toFixed(2); 
+            return total; 
         }
 
-        return total; 
-    }
-
-    calculateTotalPrice(); 
+        calculateTotalPrice(); 
+    },[items])
 
     return(
         <div className="flex flex-col h-screen">
