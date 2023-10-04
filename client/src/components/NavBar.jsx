@@ -1,6 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 
@@ -14,6 +12,9 @@ const NavBar = () => {
     const handleNav = () => { 
         setIsOpen(!isOpen); 
     }
+
+    //need to update the items based off the quantity not the items length 
+    
 
     return(
             <nav className="border-solid border-b border-cyan-900 flex flex-row justify-between items-center px-10 py-4">
