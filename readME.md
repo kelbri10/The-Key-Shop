@@ -5,11 +5,22 @@ The Key Shop is an E-commerce website built with a React and Tailwind frontend w
 ## Inspiration 
 As a keyboard enthusiast, I frequent a lot of custom keyborad sites. Some great examples are CannonKeys, Novelkeys, and Osume. Each site has their own personalized style that is characteristic to their brand. I drew a lot of inspiration from Osume regarding the design layout and casual website copy. The accessible blue coloring was largely inspired by Cannonkeys and Novelkeys both who lean heavily on a blue color palette and straight forward product cards that allow customers to view pricing, product, and in stock easily.
 
-## Visuals
-![Landing page displaying Back to School Sale](image-1.png)
-![Collections Page with active dropdown menu displayed](image-3.png)
-
 ## Features 
+- Responsive Web Design
+- View all In stock Products pulled from database 
+- Filter products by category
+- If ```inStock``` boolean is false in database, add to cart will display as disabled "Out of Stock"
+- Add Products to cart
+- Cart displays subtotal before tax calculations
+
+## Visuals
+When customers go to the live site, they are greeted with Back to School sale promotion.
+
+![Landing page displaying Back to School Sale](image-1.png) 
+
+Below is a screenshot featuring the Collections page with the active dropdown menu. 
+
+![Collections Page with active dropdown menu displayed](image-3.png)
 
 ## Local Environment setup
 In order to setup, The Key Shop on your computer, first fork and clone the repository.
@@ -49,6 +60,8 @@ Once the dependencies are installed, run ```npm run dev``` to start the client a
 ## Task List 
 - [ ] Replace Lorem Ipsum with Website copy
 - [ ] Integrate Hamburger Menu for Smaller Screen Sizes
+- [ ] Add feature for Customer to edit quantity of items in their cart
+- [ ] Add delete button if Customer wants to remove an item from their cart
 - [ ] Optimize fetch data from database 
 - [ ] Fix Bug on Product Page where footer does not reach the bottom
 
