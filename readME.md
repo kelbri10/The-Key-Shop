@@ -1,9 +1,15 @@
 # The Key Shop
 
-The Key Shop is an E-commerce website built with a React and Tailwind frontend with a MongoDB and Express backend. Customers can view featured products, view products by category, and add products to cart. 
-
 ## Inspiration 
 As a keyboard enthusiast, I frequent a lot of custom keyborad sites. Some great examples are CannonKeys, Novelkeys, and Osume. Each site has their own personalized style that is characteristic to their brand. I drew a lot of inspiration from Osume regarding the design layout and casual website copy. The accessible blue coloring was largely inspired by Cannonkeys and Novelkeys both who lean heavily on a blue color palette and straight forward product cards that allow customers to view pricing, product, and in stock easily.
+
+## Frameworks, Languages, and Software Used 
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) 
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![React Router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
 ## Features 
 - Responsive Web Design
