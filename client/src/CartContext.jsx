@@ -10,9 +10,9 @@ export const CartProvider = ({children}) => {
 
 
         setItems(prevState => { 
-            console.log(id); 
+            
             let found = prevState.find(el => el.id === id); 
-            console.log(JSON.stringify(found)); 
+         
             if (found){ 
                 return prevState.map(el => el.id === id ? {...el, qty: el.qty++} : el); 
             } 

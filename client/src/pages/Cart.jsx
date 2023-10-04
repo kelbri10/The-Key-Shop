@@ -9,9 +9,9 @@ import OrderDetails from "./fragments/OrderDetails";
 
 const Cart = () => { 
     const {items} = useContext(CartContext);
-    const [total, setTotal] = useState(0)
+    const [total, setTotal] = useState(0); 
+
     useEffect(() => { 
-    //maybe need to wrap this in a useEffect hook, with a dependency on if the items change
         const calculateTotalPrice = () => { 
             let temp = 0; 
             if(items.length > 0 ){ 
