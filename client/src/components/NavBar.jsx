@@ -20,13 +20,13 @@ const NavBar = () => {
             <nav className="border-solid border-b border-cyan-900 flex flex-row justify-between items-center px-10 py-4">
                 <h1 className="font-bold text-2xl">The Key Shop</h1>
 
-                <div className="MOBILE md:hidden">
+                <div className="MOBILE relative md:hidden">
                     <button className="" onClick={handleNav}>
                         <span className="mb-1 block bg-stone-900 h-1 w-6"></span>
                         <span className="mb-1 block bg-stone-900 h-1 w-6"></span>
                         <span className="block bg-stone-900 h-1 w-6"></span>
                     </button>
-                    {isOpen ? <ul className="p-20 absolute top-20 right-10 bg-stone-800 text-white flex flex-col justify-items-start gap-4">
+                    {isOpen ? <ul className="p-20 absolute right-0 bg-stone-800 text-white flex flex-col justify-items-start gap-4">
                         <li className="hover:underline hover:text-cyan-600"> <NavLink to={"/"}>Home</NavLink></li>
                         <li className="hover:underline hover:text-cyan-600"> <NavLink to={"/shop/all"}>Shop</NavLink></li>
                         <li className="hover:underline hover:text-cyan-600"> <NavLink to={"/contact"}>Contact</NavLink></li>
