@@ -64,7 +64,7 @@ In the second terminal, change directories to server:
 Once the dependencies are installed, run ```npm run dev``` to start the client and server up synchronously. Nodemon and Vite will allow you to see live changes as they are saved.
 
 ## Task List 
-- [ ] Replace Lorem Ipsum with Website copy
+- [x] Replace Lorem Ipsum with Website copy
 - [x] Integrate Hamburger Menu for Smaller Screen Sizes
 - [ ] Add feature for Customer to edit quantity of items in their cart
 - [ ] Add delete button if Customer wants to remove an item from their cart
