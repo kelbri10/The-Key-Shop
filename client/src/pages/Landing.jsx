@@ -1,7 +1,4 @@
 import NavBar from "../components/NavBar"
-import Section from "../components/landing/Section"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons"
 import keyboardImage from "../pages/images/mozano-MzxT0vUMylE-unsplash.jpg"
 import Button from "../components/Button"
 import { Link } from "react-router-dom"
@@ -31,16 +28,16 @@ const Landing = () => {
                     <div className="m-8 place-self-center lg:place-self-start lg:flex lg:flex-row gap-8">
                         <img className="rounded-md hover:shadow-lg"src={keyboardImage} width={500} height={400}/>
                         <div className="">
-                            <h3 className="text-2xl py-2 font-semibold text-stone-900">Keyboard 1</h3>
-                            <p className="pb-2 text-stone-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas pretium aenean pharetra magna ac placerat. Facilisis gravida neque convallis a cras semper. In metus vulputate eu scelerisque felis imperdiet proin fermentum.</p>
+                            <h3 className="text-2xl py-2 font-semibold text-stone-900">Summer Fun Keyboard Series</h3>
+                            <p className="pb-2 text-stone-700">Kick off the school year right with this school year with our Summer Fun Keyboard series! Paired with blue and orange keycaps, this keyboard merges nostalgia with convenience. Grab yours today!</p>
                             <Link to={"/shop/649caf124e5ae2798e415a5b"} ><Button text='Shop Now'/></Link>
                         </div>
                     </div>
 
                     <div className="m-8 place-self-center lg:place-self-end lg:flex lg:flex-row gap-8">
                         <div className="py-4">
-                            <h3 className="text-2xl font-semibold text-stone-900">Keyboard 2</h3>
-                            <p className="py-2 text-stone-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas pretium aenean pharetra magna ac placerat. Facilisis gravida neque convallis a cras semper. In metus vulputate eu scelerisque felis imperdiet proin fermentum.</p>
+                            <h3 className="text-2xl font-semibold text-stone-900">Funky Town Keyboard Series</h3>
+                            <p className="py-2 text-stone-700">Funky colors + New Keyboard equals? A Funky Time! We love a unique color scheme. Handpicked by some of our very own, we hope you enjoy this series as much as we do! </p>
                             <Link to={"/shop/649cb3e64e5ae2798e415a5d"} ><Button text='Shop Now'/></Link>
                         </div>
                         <img className="rounded-md hover:shadow-lg" src={keyboardImage} width={500}/>
@@ -58,7 +55,7 @@ const Landing = () => {
                             We're a small company on the East Coast with big dreams! Started from the passion of our co-founder in 2023, we believe entry-level keyboards should be colorful, economically accessible, and sustainable. Our founder's love for keyboards began in 2022 when she was introduced to the hobby by a close friend. Enamored with the wide range of keyboard, keycap, and switch options, she built her first keyboard and the rest was history.
                         </p>
 
-                        <ol className="w-3/5">
+                        <ol className="md:w-3/5">
                             <li className="py-5">
                                 <h3 className="text-2xl uppercase font-semibold text-stone-900">We are colorful</h3>
                                 <p className="text-stone-700">We're a diverse community with a wide range of experience. We seek to imbue our "color" into every product we produce.</p>
