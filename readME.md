@@ -65,7 +65,7 @@ Once the dependencies are installed, run ```npm run dev``` to start the client a
 
 ## Task List 
 - [ ] Replace Lorem Ipsum with Website copy
-- [ ] Integrate Hamburger Menu for Smaller Screen Sizes
+- [x] Integrate Hamburger Menu for Smaller Screen Sizes
 - [ ] Add feature for Customer to edit quantity of items in their cart
 - [ ] Add delete button if Customer wants to remove an item from their cart
 - [ ] Optimize fetch data from database 
