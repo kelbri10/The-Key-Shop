@@ -69,7 +69,7 @@ Once the dependencies are installed, run ```npm run dev``` to start the client a
 - [ ] Add feature for Customer to edit quantity of items in their cart
 - [ ] Add delete button if Customer wants to remove an item from their cart
 - [ ] Optimize fetch data from database 
-- [ ] Fix Bug on Product Page where footer does not reach the bottom
+- [ ] Fix Bug on Product Page where footer does not reach the bottom on Firefox Browser
 
 ## Authors
 Full Stack Engineer: [Kelsey Hughes](https://github.com/kelbri10)
