@@ -28,8 +28,27 @@ export const CartProvider = ({children}) => {
         })
     }
 
+    const editFromCart = (newQty, id) => { 
+        //find the item in the array
+        //once found 
+        //if the value set to 0, 
+        //remove from cart
+
+        //if the value is set to any other number
+        //update the item.qty and return new items array
+        
+        setItems(prevState => { 
+
+            if(newQty > 0){ 
+                return prevState.map(el => el.id === id ? {...el, qty: newQty} : el)
+            } else { 
+                return prevState.filter(el => el.id !== id)
+            }
+        })
+    }
+
     return( 
-        <CartContext.Provider value={{items, addToCart, deleteFromCart}}>
+        <CartContext.Provider value={{items, addToCart, deleteFromCart, editFromCart}}>
             {children}
         </CartContext.Provider>
     )
