@@ -66,8 +66,8 @@ Once the dependencies are installed, run ```npm run dev``` to start the client a
 ## Task List 
 - [x] Replace Lorem Ipsum with Website copy
 - [x] Integrate Hamburger Menu for Smaller Screen Sizes
-- [ ] Add feature for Customer to edit quantity of items in their cart
-- [ ] Add delete button if Customer wants to remove an item from their cart
+- [x] Add feature for Customer to edit quantity of items in their cart
+- [x] Add delete button if Customer wants to remove an item from their cart
 - [ ] Optimize fetch data from database 
 - [ ] Fix Bug on Product Page where footer does not reach the bottom on Firefox Browser
 
