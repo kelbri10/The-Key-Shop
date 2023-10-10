@@ -10,7 +10,7 @@ const ProductCard = ({product}) =>{
             <Link to={`/shop/${product._id}`}>
                 <div className="my-8">
                     <img className="rounded-md"
-                    src={placeholderImg} alt="random unsplash image"/>
+                    src={placeholderImg} alt="dark green and silver keyboard with dark green and white keycaps sitting on a botanical deskmat next to a plant robot figure and an android small figurine"/>
                     <p className="mt-2">{product.name}</p>
                     <p className="">{product.brand}</p>
                     <p className="font-bold">${product.price["$numberDecimal"]}</p>

@@ -11,7 +11,7 @@ const HeroSection = () => {
             </div>
 
             <div className="bg-cyan-800 w-full mt-10 lg:mt-0">
-                <img className="object-cover" src={keycapImg} />
+                <img className="object-cover" src={keycapImg} alt="silver keyboard wtih bright yellow and off white keycaps sitting on a mat with different video game controllers and the words High level and Score! written on it" />
             </div>
             
         </div> 

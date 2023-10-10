@@ -15,7 +15,7 @@ const Product = () => {
                     <BreadCrumb product={el.name}/>
 
                     <div className="flex flex-col items-center md:flex-row md:gap-8 md:justify-evenly m-10 md:mx-10">
-                        <img className="rounded-md md:w-2/5" src={placeholderImg} width={500} />   
+                        <img className="rounded-md md:w-2/5" src={placeholderImg} alt="lime green keyboard with white keycaps sitting on rocks and dirt" width={500} />   
                         
                         <div className="space-y-2">
                             <h1 className="text-4xl my-4">{el.name}</h1>
