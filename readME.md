@@ -13,11 +13,13 @@ As a keyboard enthusiast, I frequent a lot of custom keyborad sites. Some great 
 
 ## Features 
 - Responsive Web Design
-- View all In stock Products pulled from database 
-- Filter products by category
-- If ```inStock``` boolean is false in database, add to cart will display as disabled "Out of Stock"
+- View all "In stock" and "Out of Stock" Products pulled from database 
+- Filter products by category on the Shop page
+- If ```inStock``` boolean is false in database, add to cart will display as disabled "Out of Stock" on both the Shop and Product pages
 - Add Products to cart
-- Cart displays subtotal before tax calculations
+- Edit product quantities in cart
+- Delete products from cart
+- Cart displays subtotal before tax calculations and adjusts totals as customer increases/decreases product quantities
 
 ## Visuals
 When customers go to the live site, they are greeted with Back to School sale promotion.
@@ -68,8 +70,8 @@ Once the dependencies are installed, run ```npm run dev``` to start the client a
 - [x] Integrate Hamburger Menu for Smaller Screen Sizes
 - [x] Add feature for Customer to edit quantity of items in their cart
 - [x] Add delete button if Customer wants to remove an item from their cart
-- [ ] Optimize fetch data from database 
 - [x] Fix Bug on Product Page where footer does not reach the bottom on Firefox Browser
+- [ ] Find alternate hosting option 
 
 ## Authors
 Full Stack Engineer: [Kelsey Hughes](https://github.com/kelbri10)
