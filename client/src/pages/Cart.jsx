@@ -1,4 +1,4 @@
-import CartContext, { CartProvider } from "../CartContext";
+import CartContext from "../CartContext";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";

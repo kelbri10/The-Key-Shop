@@ -1,7 +1,6 @@
 import { useLoaderData } from "react-router-dom"; 
 import axios from "axios";
 import ProductCard from "./ProductCard";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const ProductGrid = () => { 

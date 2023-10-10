@@ -39,10 +39,19 @@ const Product = () => {
                                 : null}
                             </div>
 
-                            <button onClick={()=> addToCart(el._id, el.name, el.price["$numberDecimal"])}
-                            className="w-full md:w-2/5 bg-cyan-700 hover:bg-cyan-500 active:bg-cyan-900 text-stone-100 px-6 py-4 md:px-4 md:py-2 rounded-md">
-                                Add to Cart
-                            </button>
+                            {
+                                !product.inStock ? <div className="mt-4">
+                                <button
+                                className="bg-gray-400 text-stone-100 hover:cursor-not-allowed px-4 py-2 rounded-md">
+                                    Out of Stock
+                                </button>
+                                </div>: <div className="mt-4">
+                                    <button onClick={()=> addToCart(product._id, product.name, product.price["$numberDecimal"])}
+                                    className="bg-cyan-700 hover:bg-cyan-500 active:bg-cyan-900 text-stone-100 px-4 py-2 rounded-md">
+                                        Add to Cart
+                                    </button>
+                                </div>
+                            }
                         
                         </div>
                     </div> 

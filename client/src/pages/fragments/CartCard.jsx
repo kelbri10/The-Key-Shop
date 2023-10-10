@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrash, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import CartContext from "../../CartContext";
 import { useContext } from "react";
 
@@ -15,8 +15,7 @@ const CartCard = ({item}) => {
             <div>
                 <p>{item.name}</p>
                 <p>{item.price}</p>
-                {/* qty needs to be an input box because you need to be able to call the 
-                editCart here to handle any changes and update the total for the specific item */}
+                
                 <label htmlFor={item.qty}>QTY:
                     <input 
                         id={item.qty} 

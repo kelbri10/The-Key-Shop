@@ -6,7 +6,6 @@ import {
   Route,
   RouterProvider
 } from 'react-router-dom'
-import App from './App.jsx'
 import Landing from './pages/Landing.jsx'
 import './index.css'
 import Shop from './pages/Shop.jsx'

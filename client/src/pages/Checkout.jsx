@@ -1,5 +1,5 @@
-import { useContext, useState } from "react";
-import CartContext, { CartProvider } from "../CartContext";
+import { useContext } from "react";
+import CartContext from "../CartContext";
 import Footer from "../components/footer/Footer";
 import NavBar from "../components/NavBar";
 
