@@ -40,7 +40,7 @@ const Product = () => {
                             </div>
 
                             {
-                                !product.inStock ? <div className="mt-4">
+                                !el.inStock ? <div className="mt-4">
                                 <button
                                 className="bg-gray-400 text-stone-100 hover:cursor-not-allowed px-4 py-2 rounded-md">
                                     Out of Stock
