@@ -8,14 +8,16 @@ import CartContext from "../../CartContext";
 const Product = () => { 
     const { addToCart } = useContext(CartContext); 
     const product = useLoaderData(); 
+    
     return (
         <div className="">
+          
             {product.map(el => (
                 <div key={el._id}>
                     <BreadCrumb product={el.name}/>
 
-                    <div className="flex flex-col items-center md:flex-row md:gap-8 md:justify-evenly m-10 md:mx-10">
-                        <img className="rounded-md md:w-2/5" src={placeholderImg} alt="lime green keyboard with white keycaps sitting on rocks and dirt" width={500} />   
+                    <div className="flex flex-col items-center m-10">
+                        <img className="rounded-md" src={placeholderImg} alt="lime green keyboard with white keycaps sitting on rocks and dirt" width={500} />   
                         
                         <div className="space-y-2">
                             <h1 className="text-4xl my-4">{el.name}</h1>
@@ -40,12 +42,12 @@ const Product = () => {
                             </div>
 
                             {
-                                !el.inStock ? <div className="mt-4">
+                                !el.inStock ? <div className="mt-4 flex flex-row items-center justify-center">
                                 <button
                                 className="bg-gray-400 text-stone-100 hover:cursor-not-allowed px-4 py-2 rounded-md">
                                     Out of Stock
                                 </button>
-                                </div>: <div className="mt-4">
+                                </div>: <div className="mt-4 flex flex-row items-center justify-center">
                                     <button onClick={()=> addToCart(product._id, product.name, product.price["$numberDecimal"])}
                                     className="bg-cyan-700 hover:bg-cyan-500 active:bg-cyan-900 text-stone-100 px-4 py-2 rounded-md">
                                         Add to Cart
